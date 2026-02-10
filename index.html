@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaySo — Voice-Powered Task Management for iOS</title>
+    <meta name="description" content="SaySo is your hands-free task companion for iOS. Import recipes, YouTube tutorials, or just speak — then get guided step by step without touching your phone.">
+    <meta name="keywords" content="voice task manager, hands-free todo list, youtube to checklist, voice powered productivity, ios task app">
+    <meta name="author" content="SaySo">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SaySo — Voice-Powered Task Management for iOS">
+    <meta property="og:description" content="Turn your voice into organized tasks instantly. Import from YouTube, web pages, or just speak — AI handles the rest.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/icon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SaySo — Voice-Powered Task Management">
+    <meta name="twitter:description" content="Turn your voice into organized tasks instantly. Private, fast, and hands-free productivity for iOS.">
+    <meta name="twitter:image" content="assets/icon.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SaySo",
+        "operatingSystem": "iOS",
+        "applicationCategory": "ProductivityApplication",
+        "description": "Voice-powered task management. Turn speech, YouTube videos, and web pages into organized tasks with AI.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #FEF9C7;
+            --ink: #2c2a1e;
+            --teal: #4EADA0;
+            --warm: #D4917A;
+            --card: #FFFFFF;
+            --card-shadow: 0 2px 8px rgba(44, 42, 30, 0.08), 0 8px 24px rgba(44, 42, 30, 0.06);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px 24px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+        .nav-brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+        .nav-brand span {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 1; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 24px 80px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            box-shadow: 0 4px 20px rgba(44, 42, 30, 0.15);
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-family: "Patrick Hand", cursive;
+            font-size: 26px;
+            color: var(--teal);
+            margin-bottom: 16px;
+        }
+        .hero .subtitle {
+            font-size: 18px;
+            color: var(--ink);
+            opacity: 0.7;
+            max-width: 520px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .app-store-badge {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .app-store-badge:hover { transform: scale(1.05); }
+        .app-store-badge img {
+            height: 54px;
+        }
+
+        /* Features */
+        .features {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .features .section-sub {
+            text-align: center;
+            font-family: "Patrick Hand", cursive;
+            font-size: 20px;
+            color: var(--warm);
+            margin-bottom: 48px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .feature-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(44, 42, 30, 0.1), 0 12px 32px rgba(44, 42, 30, 0.08);
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 15px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .how-it-works .section-sub {
+            text-align: center;
+            font-family: "Patrick Hand", cursive;
+            font-size: 20px;
+            color: var(--warm);
+            margin-bottom: 48px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .step {
+            text-align: center;
+            padding: 0 12px;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+        .step h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .step p {
+            font-size: 15px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 64px 24px 80px;
+            background: linear-gradient(180deg, transparent 0%, rgba(78, 173, 160, 0.08) 100%);
+        }
+        .cta h2 {
+            font-family: "Patrick Hand", cursive;
+            font-size: 36px;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        .cta p {
+            font-size: 17px;
+            opacity: 0.7;
+            margin-bottom: 28px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 2px dashed rgba(44, 42, 30, 0.12);
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        footer a {
+            color: var(--ink);
+            text-decoration: none;
+        }
+        footer a:hover { text-decoration: underline; }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px; }
+            .hero .tagline { font-size: 22px; }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            .steps { grid-template-columns: 1fr; gap: 36px; }
+            .nav-links { gap: 16px; }
+            .nav-links a { font-size: 14px; }
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 40px 20px 60px; }
+            .hero h1 { font-size: 32px; }
+            .hero .tagline { font-size: 20px; }
+            .hero .subtitle { font-size: 16px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .features h2, .how-it-works h2 { font-size: 28px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-brand">
+            <img src="assets/icon.png" alt="SaySo icon">
+            <span>SaySo</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="support/">Support</a></li>
+            <li><a href="privacy/">Privacy</a></li>
+            <li><a href="terms/">Terms</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <img src="assets/icon.png" alt="SaySo app icon" class="hero-icon">
+            <h1>SaySo</h1>
+            <p class="tagline">Your Hands-Free Task Companion</p>
+            <p class="subtitle">Import a recipe, a YouTube tutorial, or just speak your plan — then let SaySo guide you step by step, completely hands-free. No picking up your phone. Just say what's next.</p>
+            <a href="https://apps.apple.com/app/sayso" class="app-store-badge" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>Everything You Need</h2>
+            <p class="section-sub">Powerful features, zero complexity</p>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Voice to Tasks</h3>
+                    <p>Describe what you need to get done and SaySo organizes it into clear steps — like having an assistant by your side.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3>YouTube Import</h3>
+                    <p>Share a YouTube video and SaySo extracts actionable steps from the content automatically.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Import</h3>
+                    <p>Share any webpage — recipes, tutorials, articles — and get a clean task list instantly.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3>Hands-Free Companion</h3>
+                    <p>Cooking, fixing your car, building furniture — check off steps and navigate with just your voice. No need to pick up your phone.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Private by Default</h3>
+                    <p>Your tasks stay on your device. No tracking, no analytics, no data selling. Ever.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>AI-Powered</h3>
+                    <p>Smart task extraction and organization powered by AI — so you can focus on doing, not planning.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p class="section-sub">Three steps to done</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Speak or Share</h3>
+                    <p>Talk to SaySo, share a YouTube link, or paste a URL. Give it your ideas in any form.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Organizes</h3>
+                    <p>SaySo's AI breaks everything down into clear, actionable tasks — instantly and accurately.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get It Done</h3>
+                    <p>Follow along hands-free while you cook, build, fix, or create. Just say "next" — SaySo keeps up with you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Simple. Fast. Private.</h2>
+            <p>Keep your hands on the task, not your phone.</p>
+            <a href="https://apps.apple.com/app/sayso" class="app-store-badge" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SaySo. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy/">Privacy Policy</a>
+            <a href="terms/">Terms of Service</a>
+            <a href="support/">Support</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — SaySo</title>
+    <meta name="description" content="SaySo Privacy Policy — Learn how SaySo handles your data. No tracking, no analytics, private by default.">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FEF9C7;
+            --ink: #2c2a1e;
+            --teal: #4EADA0;
+            --warm: #D4917A;
+            --card: #FFFFFF;
+            --card-shadow: 0 2px 8px rgba(44, 42, 30, 0.08), 0 8px 24px rgba(44, 42, 30, 0.06);
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px 24px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+        .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
+        .nav-brand span { font-weight: 700; font-size: 20px; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 1; }
+        .page-header {
+            text-align: center;
+            padding: 48px 24px 0;
+        }
+        .page-header h1 {
+            font-size: 38px;
+            font-weight: 800;
+        }
+        .page-header .sub {
+            font-family: "Patrick Hand", cursive;
+            font-size: 20px;
+            color: var(--teal);
+            margin-top: 4px;
+        }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .updated {
+            font-size: 14px;
+            opacity: 0.5;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+        .content h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 36px 0 12px;
+        }
+        .content h2:first-of-type { margin-top: 0; }
+        .content ul {
+            padding-left: 24px;
+            margin: 8px 0 16px;
+        }
+        .content li {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 6px;
+        }
+        .content a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        .content a:hover { text-decoration: underline; }
+        .content strong { opacity: 1; }
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 2px dashed rgba(44, 42, 30, 0.12);
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        footer a { color: var(--ink); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        @media (max-width: 480px) {
+            .page-header h1 { font-size: 30px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../" class="nav-brand">
+            <img src="../assets/icon.png" alt="SaySo icon">
+            <span>SaySo</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../support/">Support</a></li>
+            <li><a href="../privacy/">Privacy</a></li>
+            <li><a href="../terms/">Terms</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="sub">Your data, your control</p>
+    </div>
+
+    <main class="content">
+        <p class="updated">Last updated: February 9, 2026</p>
+
+        <p>SaySo ("we", "our", "the app") is committed to protecting your privacy. This policy explains what data the app accesses, how it is used, and your choices.</p>
+
+        <h2>Voice Data</h2>
+        <p>When you use the voice-to-task feature, your audio is sent to the Google Gemini API for real-time speech processing and task extraction. Audio is streamed for processing and is <strong>not stored</strong> by SaySo. Google's use of the data is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+        <h2>Account Data (Optional)</h2>
+        <p>You can use SaySo without creating an account. If you choose to sign in for cloud sync, we collect:</p>
+        <ul>
+            <li><strong>Email address</strong> — used for authentication</li>
+            <li><strong>User ID</strong> — a unique identifier for your account</li>
+        </ul>
+        <p>Account data is stored securely via Supabase. You can delete your account at any time from the app's settings.</p>
+
+        <h2>Task Data</h2>
+        <p>Your tasks and lists are stored locally on your device by default. If you sign in, task data is synced to the cloud via Supabase so you can access it across devices. You can use the app entirely offline without signing in.</p>
+
+        <h2>Web Content</h2>
+        <p>When you share or import a URL into SaySo, the app fetches the webpage content and sends it to the Google Gemini API for step extraction. The URL and page content are processed in real time and are <strong>not stored</strong> by SaySo.</p>
+
+        <h2>Tracking &amp; Analytics</h2>
+        <p>SaySo does <strong>not</strong>:</p>
+        <ul>
+            <li>Use the Identifier for Advertisers (IDFA)</li>
+            <li>Include any analytics or tracking SDKs</li>
+            <li>Perform cross-app or cross-site tracking</li>
+            <li>Sell, share, or rent your data to third parties</li>
+        </ul>
+
+        <h2>Data Retention</h2>
+        <p>Local data remains on your device until you delete it or uninstall the app. If you use cloud sync, your data is retained in your account until you delete it or delete your account.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>SaySo is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at <a href="mailto:13olberdingtm@gmail.com">13olberdingtm@gmail.com</a>.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SaySo. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../">Home</a>
+            <a href="../terms/">Terms of Service</a>
+            <a href="../support/">Support</a>
+        </div>
+    </footer>
+</body>
+</html>

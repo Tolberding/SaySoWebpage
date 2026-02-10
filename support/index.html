@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — SaySo</title>
+    <meta name="description" content="Get help with SaySo. Find answers to frequently asked questions or contact our support team.">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FEF9C7;
+            --ink: #2c2a1e;
+            --teal: #4EADA0;
+            --warm: #D4917A;
+            --card: #FFFFFF;
+            --card-shadow: 0 2px 8px rgba(44, 42, 30, 0.08), 0 8px 24px rgba(44, 42, 30, 0.06);
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px 24px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+        .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
+        .nav-brand span { font-weight: 700; font-size: 20px; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 1; }
+        .page-header {
+            text-align: center;
+            padding: 48px 24px 0;
+        }
+        .page-header h1 {
+            font-size: 38px;
+            font-weight: 800;
+        }
+        .page-header .sub {
+            font-family: "Patrick Hand", cursive;
+            font-size: 20px;
+            color: var(--teal);
+            margin-top: 4px;
+        }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .contact-box {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .contact-box h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .contact-box p {
+            font-size: 16px;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        .email-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--teal);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .email-btn:hover {
+            background: #429b8f;
+            transform: translateY(-1px);
+        }
+        .faq h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--card-shadow);
+        }
+        .faq-item h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            font-size: 15px;
+            opacity: 0.7;
+            line-height: 1.7;
+        }
+        .faq-item a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        .faq-item a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 2px dashed rgba(44, 42, 30, 0.12);
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        footer a { color: var(--ink); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        @media (max-width: 480px) {
+            .page-header h1 { font-size: 30px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../" class="nav-brand">
+            <img src="../assets/icon.png" alt="SaySo icon">
+            <span>SaySo</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../support/">Support</a></li>
+            <li><a href="../privacy/">Privacy</a></li>
+            <li><a href="../terms/">Terms</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Support</h1>
+        <p class="sub">We're here to help</p>
+    </div>
+
+    <main class="content">
+        <div class="contact-box">
+            <h2>Need Help?</h2>
+            <p>Send us an email and we'll get back to you as soon as possible.</p>
+            <a href="mailto:13olberdingtm@gmail.com" class="email-btn">13olberdingtm@gmail.com</a>
+        </div>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <article class="faq-item">
+                <h3>How does voice input work?</h3>
+                <p>Tap the microphone button and speak naturally. SaySo uses AI to listen to what you say and converts your words into structured tasks in real time. You can describe multiple tasks, add details, and SaySo will organize them for you.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>How does web import work?</h3>
+                <p>Share a link to SaySo from Safari or any app using the iOS share sheet. SaySo will read the page content and automatically extract actionable steps as tasks. This works great with articles, recipes, tutorials, and more.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>Is my data private?</h3>
+                <p>Yes. Your tasks are stored locally on your device by default. If you sign in, your data syncs securely to the cloud, but it is never sold or shared with third parties. We do not use any tracking or analytics. See our <a href="../privacy/">Privacy Policy</a> for details.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>Do I need an account?</h3>
+                <p>No. SaySo works fully offline without an account. Creating an account is optional and enables cloud sync so your tasks are available across devices.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I report a bug?</h3>
+                <p>Send an email to <a href="mailto:13olberdingtm@gmail.com">13olberdingtm@gmail.com</a> with a description of the issue, what you expected to happen, and your device and iOS version. Screenshots are always helpful.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SaySo. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../">Home</a>
+            <a href="../privacy/">Privacy Policy</a>
+            <a href="../terms/">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
