@@ -302,6 +302,26 @@
             gap: 20px;
         }
 
+        /* Video Section */
+        .video-section {
+            padding: 0 24px 64px;
+            display: flex;
+            justify-content: center;
+        }
+        .video-container {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            background: #000;
+        }
+        .video-container video {
+            width: 100%;
+            display: block;
+            border-radius: 24px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 38px; }
@@ -345,6 +365,15 @@
             <a href="https://apps.apple.com/app/sayso" class="app-store-badge" aria-label="Download on the App Store" target="_blank" rel="noopener noreferrer">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
+        </section>
+
+        <!-- App Preview Video -->
+        <section class="video-section">
+            <div class="video-container">
+                <video controls playsinline preload="metadata">
+                    <source src="assets/app-preview.mp4" type="video/mp4">
+                </video>
+            </div>
         </section>
 
         <!-- Features -->
