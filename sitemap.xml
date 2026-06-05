@@ -13,6 +13,30 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://sayso-app.netlify.app/hands-free-task-manager/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sayso-app.netlify.app/voice-task-manager-iphone/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sayso-app.netlify.app/youtube-to-checklist/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sayso-app.netlify.app/recipe-task-app/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sayso-app.netlify.app/privacy/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>yearly</changefreq>

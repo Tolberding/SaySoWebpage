@@ -383,11 +383,21 @@
         }
 
         .use-case {
+            display: block;
             border: 1px solid var(--line);
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.62);
             padding: 22px;
             min-height: 202px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.18s ease, background 0.18s ease;
+        }
+
+        .use-case:hover,
+        .use-case:focus-visible {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.82);
         }
 
         .use-case .label {
@@ -736,26 +746,26 @@
                 <p>SaySo is for practical work: the kind where your hands are busy, your screen is across the counter, and the next step still matters.</p>
             </div>
             <div class="use-cases">
-                <article class="use-case">
+                <a class="use-case" href="/recipe-task-app/">
                     <span class="label">Cook</span>
                     <h3>Turn recipes into a guided prep list</h3>
                     <p>Import a recipe page and keep moving from prep to plating with voice-led steps.</p>
-                </article>
-                <article class="use-case">
+                </a>
+                <a class="use-case" href="/youtube-to-checklist/">
                     <span class="label">Build</span>
                     <h3>Break tutorials into doable actions</h3>
                     <p>Share a YouTube tutorial and get the checklist you wish came with the video.</p>
-                </article>
-                <article class="use-case">
+                </a>
+                <a class="use-case" href="/hands-free-task-manager/">
                     <span class="label">Repair</span>
                     <h3>Follow instructions without greasy taps</h3>
                     <p>Keep the phone out of the mess while SaySo keeps the next instruction ready.</p>
-                </article>
-                <article class="use-case">
+                </a>
+                <a class="use-case" href="/voice-task-manager-iphone/">
                     <span class="label">Create</span>
                     <h3>Capture a plan before it disappears</h3>
                     <p>Speak a messy idea out loud and let SaySo organize it into a working task flow.</p>
-                </article>
+                </a>
             </div>
         </section>
 
@@ -860,6 +870,10 @@
         <div class="footer-inner">
             <p>&copy; 2026 SaySo. All rights reserved.</p>
             <div class="footer-links">
+                <a href="/hands-free-task-manager/">Hands-Free Tasks</a>
+                <a href="/voice-task-manager-iphone/">Voice Tasks</a>
+                <a href="/youtube-to-checklist/">YouTube Checklist</a>
+                <a href="/recipe-task-app/">Recipe Tasks</a>
                 <a href="privacy/">Privacy Policy</a>
                 <a href="terms/">Terms of Service</a>
                 <a href="support/">Support</a>
