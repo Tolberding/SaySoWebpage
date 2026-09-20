@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sayso-app.netlify.app/sitemap.xml
+Sitemap: https://getsayso.netlify.app/sitemap.xml

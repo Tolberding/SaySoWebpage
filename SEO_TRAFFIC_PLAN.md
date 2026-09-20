@@ -4,7 +4,7 @@ Updated: 2026-09-02
 
 ## Current Snapshot
 
-- Production site: https://sayso-app.netlify.app/
+- Production site: https://getsayso.netlify.app/
 - App Store listing: https://apps.apple.com/us/app/sayso-task-companion/id6758558171
 - The tracked local repo matches GitHub `main`.
 - The site already has canonical URLs, a sitemap, robots.txt, App Store CTAs, `SoftwareApplication` schema on the homepage, and FAQ schema on the homepage plus use-case pages.
