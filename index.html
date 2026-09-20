@@ -101,6 +101,32 @@
         }
     ]
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://sayso-app.netlify.app/#website",
+                "url": "https://sayso-app.netlify.app/",
+                "name": "SaySo",
+                "description": "Hands-free AI task companion for iPhone",
+                "publisher": { "@id": "https://sayso-app.netlify.app/#organization" }
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://sayso-app.netlify.app/#organization",
+                "name": "SaySo",
+                "url": "https://sayso-app.netlify.app/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://sayso-app.netlify.app/assets/icon-256.png"
+                },
+                "sameAs": ["https://apps.apple.com/us/app/sayso-task-companion/id6758558171"]
+            }
+        ]
+    }
+    </script>
 
     <style>
         :root {
