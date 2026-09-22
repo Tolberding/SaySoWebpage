@@ -259,6 +259,33 @@ h2 {
     font-size: 17px;
 }
 
+.example-list {
+    margin: 0;
+    padding-left: 28px;
+    color: var(--ink);
+    font-size: 17px;
+}
+
+.example-list li {
+    padding: 0 0 14px 8px;
+}
+
+.example-list li::marker {
+    color: var(--teal-dark);
+    font-weight: 800;
+}
+
+.example-list span,
+.guide-note {
+    color: var(--muted);
+}
+
+.guide-note {
+    max-width: 760px;
+    margin: 22px 0 0;
+    font-size: 16px;
+}
+
 .article-copy h3,
 .sidebar-card h3,
 .faq-card h3,
@@ -427,7 +454,8 @@ footer {
 
     .hero-lead,
     .section-heading p,
-    .article-copy p {
+    .article-copy p,
+    .example-list {
         font-size: 16px;
     }
 
