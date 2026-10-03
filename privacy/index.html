@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — SaySo</title>
-    <meta name="description" content="SaySo Privacy Policy — Learn how SaySo handles your data. No tracking, no analytics, private by default.">
+    <meta name="description" content="SaySo Privacy Policy — Guest cloud storage, optional Google AI sharing, photos, analytics, and your choices.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://getsayso.netlify.app/privacy/">
     <link rel="icon" type="image/png" href="../assets/icon.png">
@@ -147,47 +147,50 @@
     </div>
 
     <main class="content">
-        <p class="updated">Last updated: February 9, 2026</p>
-
-        <p>SaySo ("we", "our", "the app") is committed to protecting your privacy. This policy explains what data the app accesses, how it is used, and your choices.</p>
-
-        <h2>Voice Data</h2>
-        <p>When you use the voice-to-task feature, your audio is sent to the Google Gemini API for real-time speech processing and task extraction. Audio is streamed for processing and is <strong>not stored</strong> by SaySo. Google's use of the data is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
-
-        <h2>Account Data (Optional)</h2>
-        <p>You can use SaySo without creating an account. If you choose to sign in for cloud sync, we collect:</p>
-        <ul>
-            <li><strong>Email address</strong> — used for authentication</li>
-            <li><strong>User ID</strong> — a unique identifier for your account</li>
-        </ul>
-        <p>Account data is stored securely via Supabase. You can delete your account at any time from the app's settings.</p>
-
-        <h2>Task Data</h2>
-        <p>Your tasks and lists are stored locally on your device by default. If you sign in, task data is synced to the cloud via Supabase so you can access it across devices. You can use the app entirely offline without signing in.</p>
-
-        <h2>Web Content</h2>
-        <p>When you share or import a URL into SaySo, the app fetches the webpage content and sends it to the Google Gemini API for step extraction. The URL and page content are processed in real time and are <strong>not stored</strong> by SaySo.</p>
-
-        <h2>Tracking &amp; Analytics</h2>
-        <p>SaySo does <strong>not</strong>:</p>
-        <ul>
-            <li>Use the Identifier for Advertisers (IDFA)</li>
-            <li>Include any analytics or tracking SDKs</li>
-            <li>Perform cross-app or cross-site tracking</li>
-            <li>Sell, share, or rent your data to third parties</li>
-        </ul>
-
-        <h2>Data Retention</h2>
-        <p>Local data remains on your device until you delete it or uninstall the app. If you use cloud sync, your data is retained in your account until you delete it or delete your account.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>SaySo is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
-
-        <h2>Contact</h2>
-        <p>If you have questions about this privacy policy, contact us at <a href="mailto:13olberdingtm@gmail.com">13olberdingtm@gmail.com</a>.</p>
+<p>Last updated: October 3, 2026</p>
+<h2>About this policy</h2>
+<p>SaySo is operated by Trent Olberding. This policy describes the iPhone app and its companion features. Contact 13olberdingtm@gmail.com with privacy requests.</p>
+<h2>Guest and registered accounts</h2>
+<p>Guest access creates an anonymous account in Supabase. Guest lists, tasks, source links, progress, personalized steps, and saved completion photos use cloud storage; they are not stored only on your device. An internet connection is required for account access, saving and loading lists, cloud AI, imports, and purchases. Signing in lets you recover account data on another device.</p>
+<p>If you register, we process your email, account identifier, authentication information, and any name supplied by Apple or Google. Authentication is provided through Supabase and your selected sign-in provider.</p>
+<h2>Cloud AI: data and purpose</h2>
+<p>With your explicit AI-sharing permission, SaySo sends selected content to Google LLC's Gemini API. Requests may pass through SaySo's Supabase servers; live voice audio is streamed to Google. Depending on the feature you choose, this includes:</p>
+<ul>
+<li>Microphone audio during a voice session and task-list context, to understand commands and respond.</li>
+<li>Text submitted to Tidy, questions, step details, and relevant checklist context, to organize tasks or answer questions.</li>
+<li>Photos chosen for step help, to answer a question about the current step.</li>
+<li>Videos you choose to import, or audio you choose to transcribe, to extract instructions.</li>
+<li>Imported URLs, webpage text, captions, transcripts, and other source content, to produce a checklist.</li>
+</ul>
+<h2>Your AI choices</h2>
+<p>Cloud AI is optional. Declining AI sharing leaves manual task entry and deterministic local controls available; saving tasks still uses Supabase. A system camera, microphone, or photo permission does not itself authorize Google sharing.</p>
+<p>You can withdraw AI-sharing permission in Account. This stops future AI requests and voice sessions; it cannot recall requests already sent or erase provider records retroactively. Material changes to the sharing disclosure require a new acceptance. Sign-out or account changes clear this device's AI acceptance.</p>
+<h2>Photos, media, and source links</h2>
+<p>Completion photos you save are uploaded to private Supabase Storage and associated with your list. These are distinct from photos submitted to Google for step help. Imported source URLs, timestamps, generated steps, and text you save may remain in your lists.</p>
+<p>Shared or chosen videos and temporary transcription files may be copied into the app or shared app container while processing. Video imports can upload a file to Google's Files API. Do not submit another person's personal information or media unless you have permission. Opening embedded third-party video or web content also contacts that service, which applies its own privacy policy.</p>
+<h2>Local controls and optional feedback</h2>
+<p>Snap recognition and headphone/Watch motion controls process their control signals on-device. Live voice is a separate cloud feature. Camera hand-gesture recognition, when available, runs on-device without saving or uploading the camera feed; camera gestures are not enabled in this release.</p>
+<p>Optional Watch motion studies store a report locally and may transfer it to the paired iPhone. A report includes motion samples, event intervals, and device/app context. It leaves the app only if you choose to share it. Local preferences, consent status, practice completion, and gesture tuning are stored on-device.</p>
+<p>If you submit gesture feedback, its rating, optional note, account identifier, app version, build, and environment are stored in Supabase for product improvement. This feedback does not include camera images, microphone audio, or hand landmarks.</p>
+<h2>Analytics, diagnostics, and purchases</h2>
+<p>SaySo uses its own telemetry service and Apple's MetricKit to collect app interactions, import outcomes, purchase/restore outcomes, errors, crash/performance diagnostics, app and OS versions, and an app-generated installation identifier. These records are stored in Supabase for reliability and product analysis. Events do not intentionally include task text, imported URLs, photos, transcripts, email, or your account identifier. Diagnostic payloads may include technical device and runtime information.</p>
+<p>Apple processes subscription payments through StoreKit. SaySo reads verified subscription status to provide paid features. We do not receive your payment-card details.</p>
+<p>We do not use the advertising identifier (IDFA), sell personal information, or track you across other companies' apps and websites for advertising. Sharing with service providers to operate SaySo is described in this policy.</p>
+<h2>Retention and providers</h2>
+<p>Account records and saved task content are retained until deleted. Account &gt; Delete Account initiates deletion of the account and associated lists, tasks, completion photos, and account-linked feedback. It does not cancel an Apple subscription; cancel that separately through Apple's subscription settings.</p>
+<p>Installation-based analytics and diagnostics are not keyed to an account and are not automatically erased by account deletion. They are retained for service analysis; contact us about a privacy request. Local preferences and cached or temporary files may remain until removed by the app or its device storage is cleared.</p>
+<p>SaySo does not save live voice recordings as an audio archive. Google may retain submitted content and responses under its Gemini API terms, including abuse-monitoring and legal requirements. Retention and permitted uses depend on Google's service configuration; we do not promise zero retention. Google's Files API documents automatic deletion of uploaded files after 48 hours; that does not describe all processing logs or other records.</p>
+<p>Supabase hosts authentication, task data, photos, feedback, and telemetry. Google provides AI processing. Apple provides payments and optional sign-in; Google also provides optional sign-in. These providers may process information in other countries. Data is transmitted using HTTPS/TLS, with access controls on stored account data. No service can guarantee absolute security.</p>
+<h2>Access, deletion, and contact</h2>
+<p>You can view and edit your tasks in the app and initiate account deletion in Account, including for a guest account. For access, correction, export, deletion assistance, or other privacy rights available in your region, email 13olberdingtm@gmail.com. You may also contact your local data protection authority where applicable.</p>
+<p>SaySo is not directed to children under 13. Cloud AI features are intended for adults, subject to Google's eligibility terms. Contact us if you believe a child has provided personal information.</p>
+<p>We post material policy updates with a revised date. Updated AI-sharing purposes or recipients require renewed permission before that sharing.</p>
+<h2>Provider policies</h2>
+<p>Google privacy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Gemini API terms: <a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a></p>
+<p>Google Files API: <a href="https://ai.google.dev/gemini-api/docs/files">https://ai.google.dev/gemini-api/docs/files</a></p>
+<p>Supabase privacy: <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></p>
+<p>Apple privacy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
     </main>
 
     <footer>
