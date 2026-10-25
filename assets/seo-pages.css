@@ -489,3 +489,19 @@ footer {
         flex-direction: column;
     }
 }
+
+/* Keep the import guide reachable by keyboard and sticky-header anchor links. */
+html { scroll-padding-top: 100px; }
+a:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 5px; }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 20; padding: 12px 18px; background: var(--ink); color: white; }
+.skip-link:focus { top: 12px; }
+.text-link { color: var(--teal-dark); font-weight: 800; padding: 10px 0; }
+.step-card span { color: #8a4a35; }
+@media (max-width: 680px) {
+    .phone-shell { height: auto; }
+    .phone-shell img { height: auto; aspect-ratio: 498 / 1080; }
+    .cta-panel { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .app-store-badge { transition: none; }
+}
